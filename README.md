@@ -15,7 +15,7 @@ A React Native weather forecasting mobile app built using Expo, React Native, an
 ### 1. 📁 Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/MobileWeatherApp.git
+git clone https://github.com/ChezzyB/MobileWeatherApp.git
 cd MobileWeatherApp
 ```
 ---
