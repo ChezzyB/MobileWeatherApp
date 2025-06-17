@@ -61,7 +61,7 @@ This will:
 Once the API key is injected, you can start the app:
 
 ```bash
-npm start
+npx expo start
 ```
 
 Or:
