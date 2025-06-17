@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# 🌦️ MobileWeatherApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native weather forecasting mobile app built using Expo, React Native, and OpenWeatherMap API.
 
-## Get started
+## 📦 Features
 
-1. Install dependencies
+- Get current weather and hourly forecast by city
+- Toggle between Celsius and Fahrenheit
+- Toggle between light and dark themes
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## ⚙️ Setup Instructions
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. 📁 Clone the Repo
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/MobileWeatherApp.git
+cd MobileWeatherApp
+```
+---
+
+### 2. 🔐 Environment Variables
+
+This project uses a `.env` file to securely inject your OpenWeatherMap API Key into the app configuration.
+
+a. Create a `.env` file:
+
+```bash
+touch .env
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+b. Then open `.env` and add:
 
-## Learn more
+```ini
+WEATHER_API_KEY=your_actual_api_key_here
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+✅ **Never commit this file to GitHub!**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### 3. 📤 Inject API Key into `app.json`
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Before running or building the app, inject the API key by running the following script:
+
+```bash
+npm run prestart
+```
+
+This will:
+
+- Read your `.env` file
+- Insert your `WEATHER_API_KEY` into `app.json` under `expo.extra.weatherApiKey`
+
+---
+
+### 4. ▶️ Run the App
+
+Once the API key is injected, you can start the app:
+
+```bash
+npm start
+```
+
+Or:
+
+```bash
+npm run android
+# or
+npm run ios
+```
+
+---
+
+## 📁 Scripts
+
+| Script               | Description                            |
+|----------------------|----------------------------------------|
+| `npm run start`      | Starts the Expo dev server             |
+| `npm run prestart`   | Injects the API key into `app.json`    |
+| `npm run build`      | Builds the app for production          |
+| `npm run reset-project` | Clears cache and resets the project |
+
+---
+
+## 🛡️ Security & Git Best Practices
+
+✅ `.env` is gitignored  
+✅ `app.json` contains only a placeholder key  
+✅ Use `.env.example` for safe sharing
+
+---
+
+## 📄 .env.example
+
+```env
+# Rename this file to .env and add your actual key
+WEATHER_API_KEY=your_api_key_here
+```
+
+---
+
+## 🔗 API Reference
+
+- [OpenWeatherMap API Docs](https://openweathermap.org/api)
+
+---
+
+## 🧑‍💻 Author
+
+**Chesney Brooke**  
+Built for **UBCO Circuit Stream Assignment** 🚀
